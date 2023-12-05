@@ -122,7 +122,7 @@ notesList.on('click', function(e) {
   // Delete note.
   if(target.hasClass('delete-note')) {
     var dateTime = target.siblings('.date').text();  
-    jove.deleteSaved(date);
+    jove.deleteSaved(dateTime);
     target.closest('.note').remove();
   }
 });
@@ -139,8 +139,8 @@ function readOutLoud(message) {
   // Set the text and voice attributes.
 	speech.text = message;
 	speech.volume = 1;
-	speech.rate = 1.8697;
-	speech.pitch = 0.1;
+	speech.rate = 1;
+	speech.pitch = 0.888;
   
 	window.speechSynthesis.speak(speech);
 }
