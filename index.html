@@ -2,38 +2,38 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>V-Secretary - Voiced Note Writer/Reader</title>
+        <title>VT Journal | Write notes with voice, translate notes to voice</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="./shoelace.css">
         <link rel="stylesheet" href="./styles.css">
-        <script src="../../cdn/js/jquery.js"></script>
-        <script src="../../cdn/js/bowinc-web3.js"></script>
+        <script src="/lib/js/jquery.js"></script>
+        <script src="/lib/js/bowinc-web3.js"></script>
     </head>
     <body>
         <div class="container">
 
-            <h1>V-Secretary</h1>
+            <h1>Voice Texted Journal</h1>
             <p class="page-description">Allows you to take notes of your voice and also read notes</p>
 
-            <h3 class="alert alert-dark no-browser-support">Sorry, Your Browser Doesn't Support V-Secretary. Try enable the Web Speech API or Open V-Secretary in Google Chrome</h3>
+            <h3 class="alert alert-dark no-browser-support">Sorry, Your Browser Doesn't Support VT Journal. Try enable the Web Speech API or Open VT Journal</h3>
 
             <div class="app"> 
-                <h5>New Note</h5>
+                <h5>New Journal</h5>
                 <div class="input-single">
                     <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="8"></textarea>
                 </div>         
-                <button id="start-record-btn" title="Start Recording">Start Recognition</button>
-                <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
-                <button id="save-note-btn" title="Save Note">Save Note</button>   
-                <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                <button id="start-record-btn" title="Start Recording">Record ⏺️</button>
+                <button id="pause-record-btn" title="Pause Recording">Pause ⏸️</button>
+                <button id="save-note-btn" title="Save Note">save 💾</button>   
+                <p id="recording-instructions">Press the <strong>Record</strong> button and allow access.</p>
                 
                 <h5>Notes</h5>
                 <hr>
                 <ul id="notes">
                     <li>
-                        <p class="no-notes">You don't have any notes.</p>
+                        <p class="no-notes">You don't have any Journal.</p>
                     </li>
                 </ul>
 
@@ -41,9 +41,10 @@
 
         </div>
 
-        <script src="../../cdn/js/jove/jove.js"></script>
-        <script src="jove.js"></script>
+        <script src="/lib/js/jove/jove.js"></script>
+        <script src="/jove.js"></script>
     </body>
 </html>
 
 
+                        
