@@ -53,16 +53,16 @@ recognition.onresult = function(event) {
 };
 
 recognition.onstart = function() { 
-  readOutLoud("Voice recognition activated. Try speaking into the microphone.");
+  readOutLoud("am listening");
 }
 
 recognition.onspeechend = function() {
-  readOutLoud("You were quiet for a while so voice recognition writer turned itself off.");
+  readOutLoud("am waiting, start recording against");
 }
 
 recognition.onerror = function(event) {
   if(event.error == 'no-speech') {
-    readOutLoud("No speech was detected. Try again.");  
+    readOutLoud("Sorry I couldn't get any word.");  
   };
 }
 
@@ -97,8 +97,6 @@ $('#save-note-btn').on('click', function(e) {
     readOutLoud('Could not save empty note. Please add a message to your note.');
   }
   else {
-    // Save note to localStorage.
-    // The key is the dateTime with seconds, the value is the content of the note.
     jove.save(noteContent);
 
     // Reset variables and update UI.
@@ -124,7 +122,7 @@ notesList.on('click', function(e) {
   // Delete note.
   if(target.hasClass('delete-note')) {
     var dateTime = target.siblings('.date').text();  
-    jove.deleteSaved(dateTime);
+    jove.deleteSaved(date);
     target.closest('.note').remove();
   }
 });
@@ -141,7 +139,7 @@ function readOutLoud(message) {
   // Set the text and voice attributes.
 	speech.text = message;
 	speech.volume = 1;
-	speech.rate = 1;
+	speech.rate = 1.8697;
 	speech.pitch = 0.1;
   
 	window.speechSynthesis.speak(speech);
@@ -169,7 +167,7 @@ function renderNotes(notes) {
     });
   }
   else {
-    html = '<li><p class="content">You don\'t have any notes yet.</p></li>';
+    html = '<li><p class="content">You don\'t have any jornal yet.</p></li>';
   }
   notesList.html(html);
 }
